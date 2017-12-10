@@ -44,7 +44,7 @@ namespace Shop
 
         static void AddProductInBatscet(CalculeterCost Batsceta)
         {
-            Batsceta.AddProduct("A", 10);
+            Batsceta.AddProduct("A", 11);
             Batsceta.AddProduct("B", 6);
         }
 
@@ -56,6 +56,16 @@ namespace Shop
 
             StandartSummerCost standartSummer = new StandartSummerCost();
             InitDiscounts(standartSummer);
+
+            // Тут типо распологается проверка есть ли у текущего пользователя ДР и возможно другие условия
+            // Но сейчас пока просто bool переменная
+            bool userBirthday = true;
+            if (userBirthday)
+            {
+                Dictionary<int, double> discountRanges = new Dictionary<int, double>();
+                discountRanges.Add(1, 0.20);
+                standartSummer.AddDiscount(CreatorDiscounts.getInstance().CreateDiscountOnAll(new string[] {}, discountRanges));
+            }
 
             CalculeterCost a = new CalculeterCost(standartSummer);
             AddProductInBatscet(a);
