@@ -36,5 +36,10 @@ namespace Shop
         {
             return new DiscountsOnAll(exceptions, discountRanges);
         }
+
+        public BaceDiscount CreateDiscountOnAB()
+        {
+            return new DiscountOnAB();
+        }
     }
 }

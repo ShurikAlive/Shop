@@ -27,6 +27,8 @@ namespace Shop
 
         static void InitDiscounts(StandartSummerCost standartSummer)
         {
+            standartSummer.AddDiscount(CreatorDiscounts.getInstance().CreateDiscountOnAB());
+
             standartSummer.AddDiscount(CreatorDiscounts.getInstance().CreateDiscountOnSet(new string[] { "A", "B" }, 0.1));
             standartSummer.AddDiscount(CreatorDiscounts.getInstance().CreateDiscountOnSet(new string[] { "D", "E" }, 0.05));
             standartSummer.AddDiscount(CreatorDiscounts.getInstance().CreateDiscountOnSet(new string[] { "E", "F", "G" }, 0.05));
@@ -43,7 +45,7 @@ namespace Shop
         static void AddProductInBatscet(CalculeterCost Batsceta)
         {
             Batsceta.AddProduct("A", 10);
-            Batsceta.AddProduct("B", 1);
+            Batsceta.AddProduct("B", 6);
         }
 
         static void Main(string[] args)

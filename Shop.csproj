@@ -46,6 +46,7 @@
     <Compile Include="BaceDiscount.cs" />
     <Compile Include="CalculeterCost.cs" />
     <Compile Include="CreatorDiscounts.cs" />
+    <Compile Include="DiscountOnAB.cs" />
     <Compile Include="DiscountsOnAll.cs" />
     <Compile Include="DiscountsOnSets.cs" />
     <Compile Include="DiscountsOnSupplement.cs" />
